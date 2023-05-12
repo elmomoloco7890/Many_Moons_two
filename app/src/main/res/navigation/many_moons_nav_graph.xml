@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/many_moons_nav_graph"
+    app:startDestination="@id/moonHomeFragment">
+
+    <fragment
+        android:id="@+id/moonHomeFragment"
+        android:name="com.artemis.many_moons_two.fragments.MoonHomeFragment"
+        android:label="Moon Home"
+        tools:layout="@layout/fragment_moon_home" >
+        <action
+            android:id="@+id/action_moonHomeFragment_to_moonNameFragment"
+            app:destination="@id/moonNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moonDetailsFragment"
+        android:name="com.artemis.many_moons_two.fragments.MoonDetailsFragment"
+        android:label="fragment_moon_details"
+        tools:layout="@layout/fragment_moon_details" >
+        <action
+            android:id="@+id/action_moonDetailsFragment_to_moonHomeFragment"
+            app:destination="@id/moonHomeFragment" />
+        <argument
+            android:name="moonMenuDetailsArgs"
+            app:argType="com.artemis.many_moons_two.data.MoonDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/moonNameFragment"
+        android:name="com.artemis.many_moons_two.fragments.MoonNameFragment"
+        android:label="fragment_moon_name"
+        tools:layout="@layout/fragment_moon_name" >
+        <action
+            android:id="@+id/action_moonNameFragment_to_moonInnerFragment"
+            app:destination="@id/moonInnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moonInnerFragment"
+        android:name="com.artemis.many_moons_two.fragments.MoonInnerFragment"
+        android:label="fragment_moon_inner"
+        tools:layout="@layout/fragment_moon_inner" >
+        <action
+            android:id="@+id/action_moonInnerFragment_to_moonDetailsFragment"
+            app:destination="@id/moonDetailsFragment" />
+    </fragment>
+</navigation>

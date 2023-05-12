@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="moon_dark_blue">#001F51</color>
+    <color name="moon_slightly_dark_blue">#003D9F</color>
+    <color name="moon_dark_purple">#DD351B6C</color>
+    <color name="moon_lavender">#DD5129A7</color>
+    <color name="moon_lavender_lighter">#DDC2A5FF</color>
+</resources>

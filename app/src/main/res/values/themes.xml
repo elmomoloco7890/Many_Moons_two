@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Many_Moons_two" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/moon_dark_purple</item>
+        <item name="android:fontFamily">@font/moon_light</item>
+        <item name="fontFamily">@font/moon_light</item>
+    </style>
+
+    <style name="Theme.Many_Moons_two" parent="Base.Theme.Many_Moons_two" />
+</resources>

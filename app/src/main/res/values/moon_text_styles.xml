@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="moon_text" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingHorizontal">20dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="drawableEndCompat">@drawable/moon_direction_arrow</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="moon_line_text" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@drawable/bottom_border_line</item>
+    </style>
+
+    <style name="moon_btn_style" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/moon_btn_shape</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/moon_lavender_lighter</item>
+    </style>
+
+    <style name="moon_heading_text" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="moon_label_txt" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

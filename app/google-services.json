@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "489033347718",
+    "firebase_url": "https://manymoonstwo-default-rtdb.firebaseio.com",
+    "project_id": "manymoonstwo",
+    "storage_bucket": "manymoonstwo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489033347718:android:202e9e68dd79d7e88b9707",
+        "android_client_info": {
+          "package_name": "com.artemis.many_moons_two"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489033347718-q0c3pc14njo0bhl0v5lu1o94tt9avb7t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.artemis.many_moons_two",
+            "certificate_hash": "df574c45b5ffe2fe30bbdc9b4eaed5a0b4cd4eb5"
+          }
+        },
+        {
+          "client_id": "489033347718-d7ge8pm8p3co32ri3degcr60m0843ush.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI-C4wvPV4RCS9p7apvPFRI7M-oHsFwLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489033347718-d7ge8pm8p3co32ri3degcr60m0843ush.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
