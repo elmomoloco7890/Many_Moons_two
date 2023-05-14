@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.artemis.many_moons_two.R
-import com.artemis.many_moons_two.adapter.MoonInnerAdapter
-import com.artemis.many_moons_two.data.MoonDetail
+import com.artemis.many_moons_two.adapter.MoonRealInnerAdapter
+import com.artemis.many_moons_two.data_two.NewMoonItem
 import com.artemis.many_moons_two.databinding.FragmentMoonInnerBinding
 import com.artemis.many_moons_two.events.InnerItemClickListener
 import com.firebase.ui.database.FirebaseRecyclerOptions
@@ -20,7 +20,7 @@ class MoonInnerFragment : Fragment(), InnerItemClickListener {
 
     private var binding: FragmentMoonInnerBinding ?= null
 
-    private lateinit var adapter: MoonInnerAdapter
+    private lateinit var adapter: MoonRealInnerAdapter
 
     private var moonInnerDB: DatabaseReference ?= null
 
@@ -38,19 +38,19 @@ class MoonInnerFragment : Fragment(), InnerItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        moonInnerDB = FirebaseDatabase.getInstance().getReference("moon_menu")
+        moonInnerDB = FirebaseDatabase.getInstance().reference
 
 
-        val options: FirebaseRecyclerOptions<MoonDetail> =
-            FirebaseRecyclerOptions.Builder<MoonDetail>()
-                .setQuery(moonInnerDB!!, MoonDetail::class.java)
+        val options: FirebaseRecyclerOptions<NewMoonItem> =
+            FirebaseRecyclerOptions.Builder<NewMoonItem>()
+                .setQuery(moonInnerDB!!, NewMoonItem::class.java)
                 .build()
 
-        adapter = MoonInnerAdapter(options, this)
+        adapter = MoonRealInnerAdapter(options, this)
 
         binding?.apply {
             moonInnerFragment = this@MoonInnerFragment
-            moonInnerAdapter = adapter
+           moonRealInnerAdapter = adapter
         }
     }
 
@@ -69,14 +69,9 @@ class MoonInnerFragment : Fragment(), InnerItemClickListener {
         binding = null
     }
 
-    override fun onItemClicked(moonDetail: MoonDetail) {
-        for(innerMoon in 1..1000){
-            if(innerMoon == 1){
-                val actions = MoonInnerFragmentDirections.actionMoonInnerFragmentToMoonDetailsFragment(moonDetail)
-                findNavController().navigate(actions)
-                break
-            }
-        }
+
+    override fun onItemClicked(newMoonItem: NewMoonItem) {
+        TODO("Not yet implemented")
     }
 
 

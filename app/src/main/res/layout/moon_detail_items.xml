@@ -4,17 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="moonDetail"
-            type="com.artemis.many_moons_two.data.MoonDetail" />
 
         <variable
-            name="moonMenuX"
-            type="com.artemis.many_moons_two.data.MoonMenuX" />
-
-        <variable
-            name="moonMenu"
-            type="com.artemis.many_moons_two.data.MoonMenu" />
+            name="newMoon"
+            type="com.artemis.many_moons_two.data_two.NewMoonItem" />
 
         <variable
             name="moonInnerItemClicked"
@@ -23,8 +16,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="@{()-> moonInnerItemClicked.onItemClicked(moonDetail)}"
+        android:layout_height="match_parent"
         app:cardElevation="0dp"
         >
 
@@ -37,8 +29,8 @@
                 style="@style/moon_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="@{moonMenuX.moon_details[moonDetail]}"
-                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                android:text="@{newMoon.moon_details}"
+                app:layout_constraintBottom_toTopOf="@+id/textView8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -47,14 +39,14 @@
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="70dp" />
+                app:layout_constraintGuide_begin="121dp" />
 
             <View
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="5dp"
                 android:background="@drawable/bottom_border_line"
                 app:layout_constraintBottom_toTopOf="@+id/guideline9"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +58,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="83dp" />
+                app:layout_constraintGuide_begin="145dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                tools:text="@tools:sample/lorem"
+                android:paddingHorizontal="20dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline13" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="70dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

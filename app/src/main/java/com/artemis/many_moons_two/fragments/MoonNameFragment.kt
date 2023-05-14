@@ -11,6 +11,7 @@ import com.artemis.many_moons_two.R
 import com.artemis.many_moons_two.adapter.MoonNameAdapter
 import com.artemis.many_moons_two.data.MoonDetail
 import com.artemis.many_moons_two.data.MoonMenuX
+import com.artemis.many_moons_two.data_two.NewMoonItem
 import com.artemis.many_moons_two.databinding.FragmentMoonNameBinding
 import com.artemis.many_moons_two.events.NameItemClickListener
 import com.firebase.ui.database.FirebaseRecyclerOptions
@@ -41,11 +42,11 @@ class MoonNameFragment : Fragment(), NameItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        moonDB = FirebaseDatabase.getInstance().getReference("moon_menu")
+        moonDB = FirebaseDatabase.getInstance().reference
 
-        val options: FirebaseRecyclerOptions<MoonMenuX> =
-                FirebaseRecyclerOptions.Builder<MoonMenuX>().
-                    setQuery(moonDB!!, MoonMenuX::class.java).build()
+        val options: FirebaseRecyclerOptions<NewMoonItem> =
+                FirebaseRecyclerOptions.Builder<NewMoonItem>().
+                    setQuery(moonDB!!, NewMoonItem::class.java).build()
 
         adapter = MoonNameAdapter(options, this)
         binding?.apply {
@@ -69,9 +70,7 @@ class MoonNameFragment : Fragment(), NameItemClickListener {
         adapter.stopListening()
     }
 
-    override fun onItemClicked(moonMenuX: MoonMenuX) {
-
-
+    override fun onItemClicked(newMoonItem: NewMoonItem) {
 
         for (moons in 1..1000){
             if (moons == 1){

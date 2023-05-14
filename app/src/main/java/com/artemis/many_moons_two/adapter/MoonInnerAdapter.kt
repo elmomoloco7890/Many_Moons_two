@@ -18,7 +18,7 @@ class MoonInnerAdapter(
 
         class InnerViewHolder(private var detailItems: MoonDetailItemsBinding): RecyclerView.ViewHolder(detailItems.root){
             fun bind(cItems: MoonDetail, listener: InnerItemClickListener){
-                detailItems.moonDetail = cItems
+                //detailItems.moonDetail = cItems
                 detailItems.moonInnerItemClicked = listener
                 detailItems.executePendingBindings()
             }

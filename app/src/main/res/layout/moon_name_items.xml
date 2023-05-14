@@ -9,6 +9,10 @@
             type="com.artemis.many_moons_two.data.MoonMenuX" />
 
         <variable
+            name="newMoonItem"
+            type="com.artemis.many_moons_two.data_two.NewMoonItem" />
+
+        <variable
             name="moonNameItemClick"
             type="com.artemis.many_moons_two.events.NameItemClickListener" />
 
@@ -18,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="0dp"
-        android:onClick="@{()-> moonNameItemClick.onItemClicked(moonMenuX)}"
+        android:onClick="@{()-> moonNameItemClick.onItemClicked(newMoonItem)}"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,7 +41,7 @@
                 style="@style/moon_text"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:text="@{moonMenuX.moon_name}"
+                android:text="@{newMoonItem.moon_name}"
                 app:layout_constraintBottom_toTopOf="@+id/guideline2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

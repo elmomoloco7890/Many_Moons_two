@@ -8,9 +8,10 @@
             name="moonInnerFragment"
             type="com.artemis.many_moons_two.fragments.MoonInnerFragment" />
 
+
         <variable
-            name="moonInnerAdapter"
-            type="com.artemis.many_moons_two.adapter.MoonInnerAdapter" />
+            name="moonRealInnerAdapter"
+            type="com.artemis.many_moons_two.adapter.MoonRealInnerAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +23,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:adapter="@{moonInnerAdapter}"
+            android:adapter="@{moonRealInnerAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
